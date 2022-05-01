@@ -13,12 +13,12 @@ import Row from "../Row";
 import Button from "../Button";
 import styles from "./styles/Counter.module.css";
 
-function Counter() {
+const Counter: React.FC = (): JSX.Element => {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
-  const [incrementAmount, setIncrementAmount] = useState("2");
+  const [incrementAmount, setIncrementAmount] = useState<string>("2");
 
-  const incrementValue = Number(incrementAmount) || 0;
+  const incrementValue = Number(incrementAmount);
 
   function handleClickDecrement() {
     dispatch(decrement());
@@ -78,6 +78,6 @@ function Counter() {
       </Row>
     </div>
   );
-}
+};
 
 export default Counter;

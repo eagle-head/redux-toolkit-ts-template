@@ -1,7 +1,7 @@
 import { Props } from "./types";
 import styles from "./styles/Button.module.css";
 
-const Button: React.FC<Props> = (props) => {
+const Button: React.FC<Props> = (props): JSX.Element => {
   return (
     <button
       className={props.isAsync ? styles.asyncButton : styles.button}
